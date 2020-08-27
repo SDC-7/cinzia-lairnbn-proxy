@@ -1,49 +1,39 @@
-# Project Name
+# LAirbnb
+> This webpage is inspired by a vacation rental booking website listing page.
 
-Proxy server for Lairbnb, a vacation rental booking website.
-
-## Related Projects
-
-  - https://github.com/hrr47-fec8-webber/carousel-service
-  - https://github.com/hrr47-fec8-webber/booking-service
-  - https://github.com/hrr47-fec8-webber/reviews-service
-  - https://github.com/hrr47-fec8-webber/moreplacestostay-service
+## Individual Projects
+  - https://github.com/SDC-7/carousel-service
+  - https://github.com/SDC-7/booking-service
+  - https://github.com/SDC-7/reviews-service
+  - https://github.com/SDC-7/moreplacestostay-service
 
 ## Table of Contents
 
 1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+1. [Requirements](#Requirements)
+1. [Development](#Development)
 
 ## Usage
-
-A proxy server for Lairbnb, a vacation rental booking website. Once the server is running, directing the browser to http://localhost:3000/:id will render location data for the associated id. 
+A proxy server for LAirbnb, a vacation rental booking website. Once the server is running, directing the browser to http://localhost:3000/:id will render location data for the associated id.
 
 ## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
+- Node v12.18.1
 - Express
 
-Please clone all repos listed under Related Projects and follow each ReadMe carefully before running the proxy server.
+Please clone all repos listed under Individual Projects and follow each ReadMe carefully before running the proxy server.
 
 ## Development
 
 ### Installing Dependencies
-
 From within the root directory:
-
 ```sh
-npm install -g webpack
 npm install
 ```
 ## Running the Proxy
-
 Once all services are ready and databases and servers are up an running, from within the root directory:
 
 ```sh
 npm start
 ```
 
-Direct the browser to http://localhost:3000/:id, passing in 1, 2, or 3 to see data associated with the particular location id. 
+Direct the browser to http://localhost:3000/:id, passing in 1, 2, or 3 to see data associated with the particular listing id.

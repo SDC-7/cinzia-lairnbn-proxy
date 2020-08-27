@@ -1,14 +1,16 @@
 {
-  "name": "LairBnB",
-  "version": "",
-  "description": "Airbnb Clone Proxy",
-  "author": "Brennan Caldwell",
-  "license": "",
+  "name": "cinzia-lairbnb-proxy",
+  "version": "2.0.0",
+  "description": "This is my proxy to bring all lairbnb modules together.",
+  "main": "server/index.js",
+  "author": "Cinzia Borello",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server/index.js"
+    "start": "node server/index.js",
+    "start:dev": "nodemon server/index.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -18,8 +20,5 @@
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
   }
 }

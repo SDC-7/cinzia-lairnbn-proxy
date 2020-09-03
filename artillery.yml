@@ -16,4 +16,4 @@ scenarios:
   - name: "GET one"
     flow:
       - get:
-          url: "/api/booking/{{$randomNumber(1,10000000)}}"
+          url: "/{{$randomNumber(1,10000000)}}"

@@ -9,36 +9,18 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, '/../client')));
 app.use('/:id', express.static(path.join(__dirname, '/../client')));
 
+// Carousel
+app.use('/api/images/:id', createProxyMiddleware({ target: 'http://localhost:3001', changeOrigin: true }));
+
 // Booking service
 app.use('api/booking/:id', createProxyMiddleware({ target: 'http://localhost:3002', changeOrigin: true }));
 
-// app.get('/api/images/:id', (req, res) => {
-//   const id = req.url.slice(12);
-//   axios.get(`http://localhost:3001/api/images/${id}`)
-//     .then((data) => res.send(data.data))
-//     .catch((error) => console.log(error));
-// });
+// Reviews
+app.use('/api/overall_reviews/:id', createProxyMiddleware({ target: 'http://localhost:3003', changeOrigin: true }));
+app.use('/api/individual_reviews/:id', createProxyMiddleware({ target: 'http://localhost:3003', changeOrigin: true }));
 
-// app.get('/api/booking/:id', (req, res) => {
-//   const id = req.url.slice(13);
-//   axios.get(`http://localhost:3002/api/booking/${id}`)
-//     .then((data) => res.send(data.data))
-//     .catch((error) => console.log(error));
-// });
-
-// app.get('/api/overall_reviews/:id', (req, res) => {
-//   const id = req.url.slice(21);
-//   axios.get(`http://localhost:3003/api/overall_reviews/${id}`)
-//     .then((data) => res.send(data.data))
-//     .catch((error) => console.log(error));
-// });
-
-// app.get('/api/individual_reviews/:id', (req, res) => {
-//   const id = req.url.slice(24);
-//   axios.get(`http://localhost:3003/api/individual_reviews/${id}`)
-//     .then((data) => res.send(data.data))
-//     .catch((error) => console.log(error));
-// });
+// More places
+app.use('/residences', createProxyMiddleware({ target: 'http://localhost:3004', changeOrigin: true }));
 
 app.listen(port, () => {
   console.log(`Proxy server listening on port ${port}`);

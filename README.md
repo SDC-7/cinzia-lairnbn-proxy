@@ -1,4 +1,4 @@
-# LAirbnb
+# Vacay
 > This webpage is inspired by a vacation rental booking website listing page.
 
 ## Individual Projects
@@ -14,7 +14,7 @@
 1. [Development](#Development)
 
 ## Usage
-A proxy server for LAirbnb, a vacation rental booking website. Once the server is running, directing the browser to http://localhost:3000/:id will render location data for the associated id.
+A proxy server for Vacay, a vacation rental booking website. Once the server is running, directing the browser to http://localhost:3000/:id will render location data for the associated id.
 
 ## Requirements
 - Node v12.18.1
@@ -36,4 +36,4 @@ Once all services are ready and databases and servers are up an running, from wi
 npm start
 ```
 
-Direct the browser to http://localhost:3000/:id, passing in 1, 2, or 3 to see data associated with the particular listing id.
+Direct the browser to http://localhost:3000/:id, passing a number to see data associated with the particular listing ID.
